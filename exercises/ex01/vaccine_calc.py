@@ -18,22 +18,22 @@ from datetime import timedelta
 
 
 # Begin your solution here...
-Pop: int = int(input("Population: "))
-Doses_admin: int = int(input("Doses administered: "))
-Doses_day: int = int(input("Doses per day: "))
-Target: float = int(input("Target percent vaccinated: ")) / 100
+pop: int = int(input("Population: "))
+doses_admin: int = int(input("Doses administered: "))
+doses_day: int = int(input("Doses per day: "))
+target: float = int(input("Target percent vaccinated: ")) / 100
 
-already: int = int(round(Doses_admin/2))
-total: int = int(round(Target * Pop))
+already: int = int(round(doses_admin/2))
+total: int = int(round(target * pop))
 still_need: int = int(total - already)
-ppl_doses_day: int = int(round(Doses_day/2))
+ppl_doses_day: int = int(round(doses_day/2))
 days_needed: int = int(round(still_need / ppl_doses_day))
 
 today: datetime = datetime.today()
 how_many: timedelta = timedelta(days_needed)
 date: datetime = today + how_many
 
-print("We will reach " + str(int(Target * 100)) + "% vaccination in " + str(days_needed) + " days, which falls on " + date.strftime("%B %d, %Y"))
+print("We will reach " + str(int(target * 100)) + "% vaccination in " + str(days_needed) + " days, which falls on " + date.strftime("%B %d, %Y"))
 
 
 
