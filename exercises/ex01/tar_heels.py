@@ -16,4 +16,3 @@ else:
         else:
             if number % 2 != 0 and number % 7 != 0:
                 print("CAROLINA")
-
