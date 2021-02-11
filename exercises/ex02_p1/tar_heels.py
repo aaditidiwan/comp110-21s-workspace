@@ -6,9 +6,9 @@ __author__ = "730316437"
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     choice: int = int(input("Enter an int: "))
-    print(tar_heel(choice))
+    print(tar_heels(choice))
 
-def tar_heel(n: int) -> str:
+def tar_heels(n: int) -> str:
     """Returns a UNC related string"""
     if n % 2 == 0 and n % 7 == 0:
         return "TAR HEELS"

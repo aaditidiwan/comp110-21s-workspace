@@ -13,7 +13,7 @@ def main() -> None:
 
 
 def fortune_cookie() -> str:
-    """Should return a fortune based on random number chosen"""
+    """Should return a fortune based on random number chosen."""
     x: int = int(randint(1, 40))
     if x < 10:
         return "You will have a great day."
