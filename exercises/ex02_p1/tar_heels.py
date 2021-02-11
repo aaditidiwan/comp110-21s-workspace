@@ -8,8 +8,9 @@ def main() -> None:
     choice: int = int(input("Enter an int: "))
     print(tar_heels(choice))
 
+
 def tar_heels(n: int) -> str:
-    """Returns a UNC related string"""
+    """Returns a UNC related string."""
     if n % 2 == 0 and n % 7 == 0:
         return "TAR HEELS"
     else:
