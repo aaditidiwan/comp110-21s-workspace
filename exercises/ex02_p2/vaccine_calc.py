@@ -18,8 +18,9 @@ def main() -> None:
 
 
 def days_to_target(population: int, doses: int, doses_per_day: int, target: int) -> int:
+    """Gives the amount of days needed to get to the target percent vaccinated."""
     already: int = int(round(doses / 2))
-    decimal: float = float(target/100)
+    decimal: float = float(target / 100)
     total: int = int(round(decimal * population))
     still_need: int = int(total - already)
     ppl_per_day: int = int(round(doses_per_day / 2))
@@ -28,11 +29,12 @@ def days_to_target(population: int, doses: int, doses_per_day: int, target: int)
 
 
 def future_date(days_till: int) -> str: 
-    n_days: str = str(days_till)
+    """Gives the date at which the target percent vaccinated is reached."""
     today: datetime = datetime.today()
     how_many_days: timedelta = timedelta(days_till)
     date: datetime = today + how_many_days
     return(date.strftime("%B %d, %Y"))
+
 
 if __name__ == "__main__":
     main()
